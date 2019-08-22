@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+${username}<br>
+${password}
+<li th:each="emps : ${emps}"> 
+<p th:text="${emp.name}">Welcome to our grocery store!</p>
+</li>
+</body>
+</html>
