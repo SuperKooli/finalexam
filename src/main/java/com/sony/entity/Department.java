@@ -21,7 +21,7 @@ import lombok.Data;
 public class Department {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id; // 主键ID
 
 	private String name; // 部门名称

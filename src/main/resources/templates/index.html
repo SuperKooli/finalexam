@@ -7,8 +7,8 @@
 <body>
 ${username}<br>
 ${password}
-<li th:each="emps : ${emps}"> 
-<p th:text="${emp.name}">Welcome to our grocery store!</p>
+<li th:each="emp : ${emps}"> 
+<p th:text="${emp}">Welcome to our grocery store!</p>
 </li>
 </body>
 </html>

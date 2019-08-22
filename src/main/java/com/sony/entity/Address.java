@@ -14,7 +14,7 @@ import lombok.Data;
 public class Address {
  
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id; // 主键ID
  
 	private String province; // 省

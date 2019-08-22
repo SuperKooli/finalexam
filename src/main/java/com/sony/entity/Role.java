@@ -11,11 +11,15 @@ import lombok.Data;
 public class Role {
  
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id; // 主键ID
  
 	private String name; // 角色名称
  
+	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@JoinTable(name = "tbl_employee_role", joinColumns = { @JoinColumn(name = "role_id") }, inverseJoinColumns = {
+			@JoinColumn(name = "employee_id") })
+	private List<Employee> employees;
 
  
 }
